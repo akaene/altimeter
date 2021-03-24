@@ -1,0 +1,21 @@
+@media(min-height: 800px) {
+  .leaflet-container {
+    height: 75vh;
+  }
+}
+
+@media(max-height: 799px) {
+  .leaflet-container {
+    height: 70vh;
+  }
+}
+
+@media(max-height: 599px) {
+  .leaflet-container {
+    height: 65vh;
+  }
+}
+
+.leaflet-container.crosshair-cursor-enabled {
+  cursor:crosshair;
+}

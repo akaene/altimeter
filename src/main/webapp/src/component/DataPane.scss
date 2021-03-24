@@ -1,0 +1,20 @@
+.position-input-type {
+  display: flex !important;
+}
+
+.position-deg-min-sec {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.position-deg-min-sec:last-child {
+  padding-right: 0;
+}
+
+.datapane-row {
+  margin-top: 1rem;
+}
+
+.datapane-value {
+  text-align: right;
+}

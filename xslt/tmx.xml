@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- Contains captions and number format definition for localized report export -->
+<tmx>
+    <body>
+        <tu tuid="numberFormat">
+            <tuv xml:lang="en"><seg>#,###.00</seg></tuv>
+            <tuv xml:lang="cs"><seg># ###,00</seg></tuv>
+        </tu>
+        <tu tuid="latitude">
+            <tuv xml:lang="en"><seg>Latitude</seg></tuv>
+            <tuv xml:lang="cs"><seg>Zeměpisná šířka</seg></tuv>
+        </tu>
+        <tu tuid="longitude">
+            <tuv xml:lang="en"><seg>Longitude</seg></tuv>
+            <tuv xml:lang="cs"><seg>Zeměpisná délka</seg></tuv>
+        </tu>
+        <tu tuid="elevation">
+            <tuv xml:lang="en"><seg>Surface elevation</seg></tuv>
+            <tuv xml:lang="cs"><seg>Nadmořská výška povrchu</seg></tuv>
+        </tu>
+        <tu tuid="safetyAltitudeLevel">
+            <tuv xml:lang="en"><seg>Safety altitude level</seg></tuv>
+            <tuv xml:lang="cs"><seg>Nadmořská výška ochranné plochy</seg></tuv>
+        </tu>
+        <tu tuid="maxObstacleHeight">
+            <tuv xml:lang="en"><seg>Maximum obstacle height</seg></tuv>
+            <tuv xml:lang="cs"><seg>Maximální výška překážky</seg></tuv>
+        </tu>
+        <tu tuid="metersAboveSeaLevel">
+            <tuv xml:lang="en"><seg>m a.s.l.</seg></tuv>
+            <tuv xml:lang="cs"><seg>m n.m.</seg></tuv>
+        </tu>
+        <tu tuid="safetyZone">
+            <tuv xml:lang="en"><seg>Determining safety zone</seg></tuv>
+            <tuv xml:lang="cs"><seg>Určující ochranné pásmo</seg></tuv>
+        </tu>
+        <tu tuid="outsideAirportSafetyZone">
+            <tuv xml:lang="en"><seg>Location outside of the airport safety level control area.</seg></tuv>
+            <tuv xml:lang="cs"><seg>Pozice je mimo ochranné pásmo letiště.</seg></tuv>
+        </tu>
+    </body>
+</tmx>
