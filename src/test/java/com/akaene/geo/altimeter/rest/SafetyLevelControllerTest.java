@@ -11,6 +11,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -23,6 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(SafetyLevelController.class)
 @Import(RestTestConfig.class)
 @AutoConfigureMockMvc
+@ActiveProfiles("test")
 class SafetyLevelControllerTest extends RestControllerTestBase {
 
     private static final String PATH = "/safetyAltitudeLevel";

@@ -1,6 +1,7 @@
 package com.akaene.geo.altimeter.service.gdal;
 
 import com.akaene.geo.altimeter.exception.AltimeterException;
+import jakarta.annotation.PostConstruct;
 import org.gdal.gdal.Dataset;
 import org.gdal.gdal.gdal;
 import org.gdal.gdalconst.gdalconstConstants;
@@ -10,7 +11,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.io.File;
 import java.util.*;
 
