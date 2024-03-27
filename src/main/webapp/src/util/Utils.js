@@ -1,4 +1,4 @@
-export default {
+const Utils = {
 
     round(val, decimals = 2) {
         const to = Math.pow(10, decimals);
@@ -29,4 +29,6 @@ export default {
         document.body.removeChild(tempLink);
         window.URL.revokeObjectURL(blobURL);
     }
-}
+};
+
+export default Utils;

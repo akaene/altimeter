@@ -1,8 +1,7 @@
 import React from "react";
 import withI18n from "./withI18n";
 import {injectIntl} from "react-intl";
-import Grid from "@material-ui/core/Grid";
-import {Button, Card, CardActions, CardContent, CardHeader, Container, TextField, Typography} from "@material-ui/core";
+import {Button, Card, Grid, CardActions, CardContent, CardHeader, Container, TextField, Typography} from "@mui/material";
 import {login} from "../action/AsyncActions";
 import {connect} from "react-redux";
 import "./Login.scss";

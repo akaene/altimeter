@@ -3,17 +3,16 @@ import PropTypes from "prop-types";
 import {injectIntl} from "react-intl";
 import {connect} from "react-redux";
 import {dismissMessage} from "../../action/SyncActions";
-import {Snackbar} from "@material-ui/core";
+import {Snackbar} from "@mui/material";
 import withI18n from "../withI18n";
 
-const Message = props => {
-    const message = props.message;
+const Message = ({message, dismissMessage, i18n}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
-            props.dismissMessage(message);
+            dismissMessage(message);
         }, 1500);
         return () => clearTimeout(timer);
-    }, []);
+    }, [message, dismissMessage]);
     return <Snackbar
         anchorOrigin={{vertical: "top", horizontal: "right"}}
         key="message-bar"
@@ -21,7 +20,7 @@ const Message = props => {
         ContentProps={{
             'aria-describedby': 'message-id',
         }}
-        message={<span id="message-id">{message.messageId ? props.i18n(message.messageId) : message.message}</span>}
+        message={<span id="message-id">{message.messageId ? i18n(message.messageId) : message.message}</span>}
     />;
 };
 

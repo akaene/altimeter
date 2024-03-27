@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
-import {FormControl, FormControlLabel, Grid, Radio, RadioGroup, Typography} from "@material-ui/core";
+import {FormControl, FormControlLabel, Grid, Radio, RadioGroup, Typography} from "@mui/material";
 import withI18n from "./withI18n";
 import {injectIntl} from "react-intl";
 import "./DataPane.scss";

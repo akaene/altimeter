@@ -5,6 +5,7 @@ target
 *.iml
 .idea
 *.log
+**/.env
 
 npm-debug.log*
 yarn-debug.log*

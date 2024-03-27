@@ -1,4 +1,4 @@
-export default {
+const cs = {
     locale: "cs",
     messages: {
         "please-wait": "Prosím, čekejte...",
@@ -36,4 +36,6 @@ export default {
 
         "version": "Verze: {version}"
     }
-}
+};
+
+export default cs;

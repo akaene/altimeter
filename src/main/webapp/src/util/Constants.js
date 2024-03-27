@@ -1,11 +1,34 @@
+/**
+ * Aggregated object of process.env and window.__config__ to allow dynamic configuration
+ */
+const ENV = {
+        ...Object.keys(process.env).reduce((acc, key) => {
+        const strippedKey = key.replace("REACT_APP_", "");
+        acc[strippedKey] = process.env[key];
+        return acc;
+    }, {}),
+    ...window.__config__,
+};
+
+/**
+ * Helper to make sure that all envs are defined properly
+ * @param name env variable name (without the REACT_APP prefix)
+ * @param defaultValue Default variable name
+ */
+export function getEnv(name, defaultValue) {
+    const value = ENV[name] || defaultValue;
+    if (value !== undefined) {
+        return value;
+    }
+    throw new Error(`Missing environment variable: ${name}`);
+}
+
 const constants = {
     APP_NAME: "Altimeter",
-    // Will be replaced with actual server url during build
-    SERVER_URL: "__SERVER_URL__",
-    // Will be replaced by version read from package.json
-    VERSION: "__VERSION__",
-    INITIAL_LATITUDE: "__INITIAL_LATITUDE__",
-    INITIAL_LONGITUDE: "__INITIAL_LONGITUDE__",
+    SERVER_URL: getEnv("SERVER_URL"),
+    VERSION: getEnv("VERSION"),
+    INITIAL_LATITUDE: getEnv("INITIAL_LATITUDE"),
+    INITIAL_LONGITUDE: getEnv("INITIAL_LONGITUDE"),
     INITIAL_MAP_ZOOM: 14,
     LANG: {
         CS: {

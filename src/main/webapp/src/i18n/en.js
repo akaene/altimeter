@@ -1,4 +1,4 @@
-export default {
+const en = {
     locale: "en",
     messages: {
         "please-wait": "Please wait...",
@@ -36,4 +36,6 @@ export default {
 
         "version": "Version: {version}"
     }
-}
+};
+
+export default en;

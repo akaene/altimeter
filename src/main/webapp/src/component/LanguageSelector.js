@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import {Button, Menu, MenuItem} from "@mui/material";
+import {ArrowDropDown} from "@mui/icons-material";
 import Constants from "../util/Constants";
 import {connect} from "react-redux";
 import {switchLanguage} from "../action/SyncActions";
+
 
 class LanguageSelector extends React.Component {
 
@@ -38,7 +37,7 @@ class LanguageSelector extends React.Component {
         const selected = this.resolveSelectedLanguage();
         return <div className="footer-toggle">
             <Button aria-owns={this.state.anchorEl ? "language-selector" : undefined}
-                    aria-haspopup="true" onClick={this._openSelector}>{selected.label}<ArrowDropDownIcon/></Button>
+                    aria-haspopup="true" onClick={this._openSelector}>{selected.label}<ArrowDropDown/></Button>
             <Menu id="language-selector" anchorEl={this.state.anchorEl} open={Boolean(this.state.anchorEl)}
                   onClose={this._closeSelector}>
                 {Object.getOwnPropertyNames(Constants.LANG).map(k => {

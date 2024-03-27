@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Grid, TextField, Typography} from "@material-ui/core";
+import {Button, Grid, TextField, Typography} from "@mui/material";
 import withI18n from "./withI18n";
 import {injectIntl} from "react-intl";
 import * as PropTypes from "prop-types";

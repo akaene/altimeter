@@ -1,6 +1,5 @@
 import React from "react";
-import {InputAdornment, TextField, Typography} from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
+import {Grid, InputAdornment, TextField, Typography} from "@mui/material";
 import withI18n from "./withI18n";
 import {injectIntl} from "react-intl";
 import "./DataPane.scss";

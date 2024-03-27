@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
+import {Grid} from "@mui/material";
 import "./DataPane.scss";
 import SafetyLevelInfo from "./SafetyLevelInfo";
 import InputDataPane from "./InputDataPane";

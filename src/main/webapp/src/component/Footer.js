@@ -1,6 +1,6 @@
 import React from "react";
 import {injectIntl} from "react-intl";
-import {AppBar, Button, Toolbar, Typography} from "@material-ui/core";
+import {AppBar, Button, Toolbar, Typography} from "@mui/material";
 import CadastralMapToggle from "./CadastralMapToggle";
 import LanguageSelector from "./LanguageSelector";
 import withI18n from "./withI18n";

@@ -1,6 +1,6 @@
 import React, {createRef} from "react";
 import {connect} from "react-redux";
-import {Map as LeafletMap, Marker, TileLayer, WMSTileLayer} from "react-leaflet";
+import {MapContainer, Marker, TileLayer, useMapEvents, WMSTileLayer} from "react-leaflet";
 import "./Map.scss";
 import Constants from "../util/Constants";
 import {updatePosition} from "../action/SyncActions";
@@ -24,8 +24,16 @@ class Map extends React.Component {
     };
 
     render() {
+        const me = this;
+        function ClickHandler() {
+            useMapEvents({
+                click: (e) => me.onClick(e)
+            });
+            return null;
+        }
+
         const position = [this.props.lat, this.props.long];
-        return <LeafletMap ref={this.mapRef} center={position} zoom={this.state.zoom} onClick={this.onClick}
+        return <MapContainer ref={this.mapRef} center={position} zoom={this.state.zoom} onClick={this.onClick}
                            onZoomEnd={this.onZoomChange} className="crosshair-cursor-enabled">
             <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -35,7 +43,8 @@ class Map extends React.Component {
             <WMSTileLayer attribution='&amp;copy <a href="http://www.cuzk.cz">ČÚZK</a>' layers="CP.CadastralParcel"
                           opacity={0.25} url="http://services.cuzk.cz/wms/inspire-cp-wms.asp?"/>}
             <Marker position={position}/>
-        </LeafletMap>;
+            <ClickHandler/>
+        </MapContainer>;
     }
 }
 

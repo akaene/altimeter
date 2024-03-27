@@ -1,13 +1,13 @@
 import React from "react";
-import {FormControlLabel, Switch} from "@material-ui/core";
+import {FormControlLabel, Switch} from "@mui/material";
 import {injectIntl} from "react-intl";
 import withI18n from "./withI18n";
 import {connect} from "react-redux";
 import {toggleCadastralMap} from "../action/SyncActions";
 
 const CadastralMapToggle = (props) => {
-    return <div className="footer-toggle"><FormControlLabel
-        control={<Switch checked={props.displayCadastralMap}
+    return <div className="footer-toggle">
+        <FormControlLabel control={<Switch checked={props.displayCadastralMap}
                          onChange={props.toggleCadastralMap}
                          value="displayCadastralMap"
                          color="primary"/>

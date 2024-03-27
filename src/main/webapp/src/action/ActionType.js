@@ -1,4 +1,4 @@
-export default {
+const ActionType = {
     LOAD_USER: "LOAD_USER",
     LOGIN: "LOGIN",
     LOGOUT: "LOGOUT",
@@ -13,10 +13,12 @@ export default {
     RESET_ELEVATION_AND_SAFETY_LEVEL: "RESET_ELEVATION_AND_SAFETY_LEVEL",
     PUBLISH_MESSAGE: "PUBLISH_MESSAGE",
     DISMISS_MESSAGE: "DISMISS_MESSAGE"
-}
+};
 
 export const AsyncStatus = {
     REQUEST: 0,
     SUCCESS: 1,
     FAILURE: 2
 };
+
+export default ActionType;

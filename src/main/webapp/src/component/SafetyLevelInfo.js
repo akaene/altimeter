@@ -1,11 +1,11 @@
 import React from "react";
 import {connect} from "react-redux";
-import {Button, Grid, Typography} from "@material-ui/core";
+import {Button, Grid, Typography} from "@mui/material";
 import withI18n from "./withI18n";
 import {injectIntl} from "react-intl";
 import "./DataPane.scss";
 import * as PropTypes from "prop-types";
-import PrintIcon from "@material-ui/icons/Print";
+import {Print as PrintIcon} from "@mui/icons-material";
 import Utils from "../util/Utils";
 import Mask from "./Mask";
 import {downloadReport, loadSafetyAltitudeLevel} from "../action/AsyncActions";
