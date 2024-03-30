@@ -46,3 +46,7 @@ in `application.properties` (see above). The UI will first display a login dialo
 ## More info
 
 GDAL documentation can be found [here](https://gdal.org/java/index.html?overview-summary.html).
+
+## License
+
+GPL
