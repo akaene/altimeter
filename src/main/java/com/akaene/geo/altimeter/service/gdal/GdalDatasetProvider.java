@@ -16,7 +16,7 @@ import java.util.*;
 
 @Service
 @PropertySource("classpath:altimeter.properties")
-class GdalDatasetProvider {
+public class GdalDatasetProvider {
 
     private static final Logger LOG = LoggerFactory.getLogger(GdalDatasetProvider.class);
 

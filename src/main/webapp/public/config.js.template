@@ -1,6 +1,0 @@
-// Dynamic configuration
-window.__config__ = {
-  SERVER_URL: '${SERVER_URL}',
-  INITIAL_LATITUDE: '${INITIAL_LATITUDE}',
-  INITIAL_LONGITUDE: '${INITIAL_LONGITUDE}'
-}

@@ -2,6 +2,7 @@ import ActionType, {AsyncStatus} from "./ActionType";
 import Utils from "../util/Utils";
 import {publishMessage, updatePosition} from "./SyncActions";
 import Ajax from "../util/Ajax";
+import {getEnv} from "../util/Constants";
 
 function asyncRequest(action) {
     return Object.assign({}, action, {status: AsyncStatus.REQUEST});
@@ -50,7 +51,7 @@ export function loadUser() {
     const action = {
         type: ActionType.LOAD_USER
     };
-    if (process.env.REACT_APP_USE_AUTH === "true") {
+    if (getEnv("USE_AUTH", "false") === "true") {
         return dispatch => {
             dispatch(asyncRequest(action));
             return Ajax.get("/users/current")

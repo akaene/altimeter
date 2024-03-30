@@ -6,7 +6,7 @@
 
     <groupId>com.akaene.geo</groupId>
     <artifactId>altimeter</artifactId>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <packaging>jar</packaging>
 
     <parent>
@@ -22,7 +22,8 @@
         <maven.compiler.target>17</maven.compiler.target>
 
         <com.fasterxml.jackson.version>2.15.4</com.fasterxml.jackson.version>
-        <org.gdal.version>3.8.0</org.gdal.version>
+        <org.gdal.version>3.6.4</org.gdal.version>
+        <gdal.path>${project.basedir}/gdal/${org.gdal.version}/gdal.jar</gdal.path>
         <org.apache.xmlgraphics.fop.version>2.9</org.apache.xmlgraphics.fop.version>
     </properties>
 
@@ -75,6 +76,8 @@
             <groupId>org.gdal</groupId>
             <artifactId>gdal</artifactId>
             <version>${org.gdal.version}</version>
+            <scope>system</scope>
+            <systemPath>${gdal.path}</systemPath>
         </dependency>
 
         <dependency>
@@ -90,6 +93,7 @@
     </dependencies>
 
     <build>
+        <finalName>altimeter</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -134,7 +138,7 @@
 
     <organization>
         <name>AKAENE Partners</name>
-        <url>http://www.akaene.com</url>
+        <url>https://www.akaene.com</url>
     </organization>
 
     <scm>

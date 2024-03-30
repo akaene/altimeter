@@ -1,9 +1,9 @@
 import axios from "axios";
-import Constants from "./Constants";
+import Constants, {getEnv} from "./Constants";
 
 const axiosInstance = axios.create({
     baseURL: Constants.SERVER_URL,
-    withCredentials: true
+    withCredentials: getEnv("USE_AUTH", "false") === "true"
 });
 
 axiosInstance.interceptors.response.use(undefined, error => {

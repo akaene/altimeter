@@ -25,10 +25,10 @@ export function getEnv(name, defaultValue) {
 
 const constants = {
     APP_NAME: "Altimeter",
-    SERVER_URL: getEnv("SERVER_URL"),
+    SERVER_URL: getEnv("SERVER_URL", ""),
     VERSION: getEnv("VERSION"),
-    INITIAL_LATITUDE: getEnv("INITIAL_LATITUDE"),
-    INITIAL_LONGITUDE: getEnv("INITIAL_LONGITUDE"),
+    INITIAL_LATITUDE: getEnv("INITIAL_LATITUDE", "50.107738"),
+    INITIAL_LONGITUDE: getEnv("INITIAL_LONGITUDE", "14.245939"),
     INITIAL_MAP_ZOOM: 14,
     LANG: {
         CS: {
