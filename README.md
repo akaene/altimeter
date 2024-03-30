@@ -4,20 +4,19 @@ Software for resolving surface elevation and safety level altitude based on map 
 
 ## Requirements
 
-This system requires GDAL to be installed on a system, together with Java bindings.
-
-It has been tested on GDAL 2.2.2 with GDAL Java bindings 2.4.0.
+- Java 17
+- GDAL 3.6.4
 
 GDAL JNI bindings and GDAL data directory need to be configured using the following environment variables:
 
-* `LD_LIBRARY_PATH=/path_to/gdal-2.4.1/swig/java`
-* `GDAL_DATA=/path_to/gdal/1.9`
+* `LD_LIBRARY_PATH=gdal/3.6.4/jni/`
+  * Contains pre-build Java bindings for GDAL version 3.6.4.
+* `GDAL_DATA`
 
 `GDAL_DATA` directory depends on system GDAL installation and can be determined using
-`gdal-config --datadir`
+`gdal-config --datadir`.
 
-GDAL JNI bindings need to be build for the system, instructions can be found at [https://trac.osgeo.org/gdal/wiki/GdalOgrInJavaBuildInstructionsUnix](https://trac.osgeo.org/gdal/wiki/GdalOgrInJavaBuildInstructionsUnix).
-[This](http://geoexamples.blogspot.com/2012/05/running-gdal-java.html) article is also quite helpful.
+If you want to use a different version of GDAL, see `gdal/how-to.md`.
 
 ## Configuration
 
