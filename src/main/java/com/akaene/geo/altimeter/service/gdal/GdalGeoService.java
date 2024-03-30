@@ -55,7 +55,7 @@ public class GdalGeoService implements GeoService {
     }
 
     private Geometry transformCoordinatesToTarget(Double latitude, Double longitude) {
-        final Geometry geometry = ogr.CreateGeometryFromWkt(String.format("POINT (%f %f)", longitude, latitude));
+        final Geometry geometry = ogr.CreateGeometryFromWkt(String.format("POINT (%f %f)", latitude, longitude));
         geometry.Transform(coordinateTransform);
         return geometry;
     }
