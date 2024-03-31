@@ -48,7 +48,7 @@
                     <fo:region-after region-name="xsl-region-after" extent="25mm" display-align="after"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
-            <fo:page-sequence master-reference="A4-portrail" font-family="Roboto Regular">
+            <fo:page-sequence master-reference="A4-portrail" font-family="Liberation Sans">
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block font-size="150%">
                         Altimeter

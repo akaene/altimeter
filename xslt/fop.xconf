@@ -66,6 +66,9 @@ the location of this file.
                           | 500 | 600 | 700 | 800 | 900
         (normal = 400, bold = 700)
         -->
+        <font embed-url="./LiberationSans-Regular.ttf">
+            <font-triplet name="Liberation Sans" style="normal" weight="normal"/>
+        </font>
 
         <!-- auto-detect fonts -->
         <directory recursive="true">/usr/share/fonts</directory>
