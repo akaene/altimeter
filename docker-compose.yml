@@ -1,8 +1,6 @@
-version: "3"
 services:
   altimeter:
-    build: .
-    image: altimeter
+    image: akaene/altimeter
     volumes:
       # This volume contains the layers to work with
       - ./layers:/tmp/layers
