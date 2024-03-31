@@ -4,11 +4,15 @@ services:
     build: .
     image: altimeter
     volumes:
+      # This volume contains the layers to work with
       - ./layers:/tmp/layers
+      # This volume contains XSLT templates for generation of PDF reports
       - ./xslt:/xslt
     environment:
       DATA_DIRECTORY: /tmp/layers
+      # File representing the surface
       DATA_SURFACE: r_dem_0624_buffer.tif
+      # File representing areas with safety levels at zero elevation (these are typically the runways)
       DATA_ZEROLEVEL: r_elev_0624.tif,r_elev_1230.tif
     ports:
       - "8080:8080"

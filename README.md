@@ -2,7 +2,20 @@
 
 Software for resolving surface elevation and safety level altitude based on map data and coordinates.
 
-## Requirements
+## Running in Docker
+
+To simplify deployment, a Docker configuration is provided. All that one needs to provide are the geographical data
+that Altimeter will use to resolve surface elevation and safety level area elevation.
+
+See `docker-compose.yml` for the required configuration and example values.
+
+
+## Running Directly on Host
+
+It is also possible to run Altimeter directly on the host system (expected Linux-based). This is a bit more complicated
+and requires installation of GDAL (see below).
+
+### Requirements
 
 - Java 17
 - GDAL 3.6.4
