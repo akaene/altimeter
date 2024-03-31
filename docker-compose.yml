@@ -1,0 +1,17 @@
+version: "3"
+services:
+  altimeter:
+    build: .
+    image: altimeter
+    volumes:
+      - ./layers:/tmp/layers
+      - ./xslt:/xslt
+    environment:
+      DATA_DIRECTORY: /tmp/layers
+      DATA_SURFACE: r_dem_0624_buffer.tif
+      DATA_ZEROLEVEL: r_elev_0624.tif,r_elev_1230.tif
+    ports:
+      - "8080:8080"
+
+
+

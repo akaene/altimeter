@@ -56,7 +56,7 @@
                 </fo:static-content>
                 <fo:static-content flow-name="xsl-region-after">
                     <fo:block>
-                        &#169; 2019 AKAENE Partners, s.r.o.
+                        &#169; 2024 AKAENE Partners, s.r.o.
                     </fo:block>
                 </fo:static-content>
 

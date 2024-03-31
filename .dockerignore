@@ -1,0 +1,13 @@
+.github
+.husky
+.idea
+build
+doc
+node_modules
+.dockerignore
+.editorconfig
+.gitattributes
+.gitignore
+Dockerfile
+layers
+xslt
